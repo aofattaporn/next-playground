@@ -3,8 +3,15 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-  const users = await prisma.blog.findMany();
-  console.log(users);
+  const blog = await prisma.blog.create({
+    data: {
+      title: "A",
+      abstract: "abstract",
+      content: "content",
+      imageURL: "",
+    },
+  });
+  console.log(blog);
 }
 
 main()

@@ -4,6 +4,7 @@ import { SIZE } from "@/types/common";
 import Image from "next/image";
 import { Blog } from "@/types/blog";
 import moment from "moment";
+import Link from "next/link";
 
 const MOCK_TAGS_SEARCH: string[] = ["Python", "Java", "Spring Boot", "Golang"];
 
@@ -22,7 +23,7 @@ const Card = ({ blog }: CardProps) => {
           <div>
             <div className=" flex justify-between">
               <h1 className=" font-bold text-xl">{title}</h1>
-              <button>read more...</button>
+              <Link href={"details"}>read more...</Link>
             </div>
             <p>{moment(date).format("LL")}</p>
           </div>

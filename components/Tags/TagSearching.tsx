@@ -10,7 +10,7 @@ type TagSearchingProps = {
 const TagSearching = ({ tagName, size }: TagSearchingProps) => {
   return (
     <Link
-      href={"/blog"}
+      href={"/allblog"}
       className={`border-2 border-gray-400 w-full 
         flex justify-center align-middle items-center
          hover:bg-slate-400 hover:text-gray-700

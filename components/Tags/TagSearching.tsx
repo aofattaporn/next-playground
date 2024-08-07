@@ -14,12 +14,13 @@ const TagSearching = ({ tagName, size }: TagSearchingProps) => {
       className={`border-2 border-gray-400 w-full 
         flex justify-center align-middle items-center
          hover:bg-slate-400 hover:text-gray-700
-         ${size === SIZE.SMALL && "h-8"}
+      
+         ${size === SIZE.SMALL && "h-8 disabled"}
          ${size === SIZE.MEDIUM && "h-16"}
          ${size === SIZE.LARGE && "h-16"}
     `}
     >
-      <p>{tagName}</p>
+      <p className="truncate">{tagName}</p>
     </Link>
   );
 };

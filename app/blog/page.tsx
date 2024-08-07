@@ -1,14 +1,14 @@
 import Card from "@/components/Card/Card";
-import React, { Suspense } from "react";
+import { MOCK_BLOGS } from "@/mock/blog";
+import React from "react";
 
 const Page = () => {
   return (
     <div className="flex flex-col gap-16">
       {/* card-blog */}
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {MOCK_BLOGS.map((blog, index) => {
+        return <Card key={index} blog={blog} />;
+      })}
     </div>
   );
 };

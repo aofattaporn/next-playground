@@ -1,4 +1,5 @@
 import TagSearching from "@/components/Tags/TagSearching";
+import { SIZE } from "@/types/common";
 import ArrowRightOutlined from "@ant-design/icons/lib/icons/ArrowRightOutlined";
 import { Suspense } from "react";
 
@@ -30,7 +31,9 @@ export default function Home() {
         <div className="grid grid-cols-4 grid-flow-row gap-4">
           <Suspense fallback={<p>these tags is Loading</p>}>
             {MOCK_TAGS_SEARCH.map((tag, index) => {
-              return <TagSearching key={index} tagName={tag} />;
+              return (
+                <TagSearching size={SIZE.MEDIUM} key={index} tagName={tag} />
+              );
             })}
           </Suspense>
         </div>
